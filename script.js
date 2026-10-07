@@ -7,17 +7,13 @@ for (i=0; i<256; i++) {
 const children = document.querySelectorAll(".container > div")
 
 
-let opacity = 0;
 
 
 children.forEach((child) => {
   child.addEventListener("mouseenter", (event) => {
-    if(opacity <= 1) {
-        opacity += 0.1
-    }
-    console.log(opacity)
-    console.log(event.target.style.opacity)
-    event.target.style.opacity = opacity
+    let currentOpacity = Number(event.target.style.opacity) || 0;
+    let newOpacity = currentOpacity + 0.1;
+    event.target.style.opacity = newOpacity
     let squareColor = `rgb(
     ${Math.floor(Math.random() * 256)},
     ${Math.floor(Math.random() * 256)},
@@ -46,15 +42,12 @@ button.addEventListener("click",
         }
         const divChildren = document.querySelectorAll(".container > div")
 
-        opacity = 0;
 
         divChildren.forEach((child) => {
         child.addEventListener("mouseenter", (event) => {
-            if(opacity <= 1) {
-                opacity += 0.1
-            }
-            console.log(opacity)
-            event.target.style.opacity = opacity
+        let currentOpacity = Number(event.target.style.opacity) || 0;
+        let newOpacity = currentOpacity + 0.1;
+        event.target.style.opacity = newOpacity
             let squareColor = `rgb(
             ${Math.floor(Math.random() * 256)},
             ${Math.floor(Math.random() * 256)},
@@ -78,17 +71,12 @@ black.addEventListener("click",
     () => {
         const divChildren = document.querySelectorAll(".container > div")
 
-        opacity = 0;
-
         divChildren.forEach((child) => {
         child.addEventListener("mouseenter", (event) => {
-            if(opacity <= 1) {
-                opacity += 0.1
-            }
-            console.log(opacity)
-            event.target.style.opacity = opacity
-            let squareColor = "black";
-            event.target.style.backgroundColor = squareColor;
+        let currentOpacity = Number(event.target.style.opacity) || 0;
+        let newOpacity = currentOpacity + 0.1;
+        event.target.style.opacity = newOpacity 
+        event.target.style.backgroundColor = "black";
         });
         });
 
