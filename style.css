@@ -1,7 +1,9 @@
 html, body {
     box-sizing: border-box;
     margin: 0;
-    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(96, 128, 177);
 }
 
 
@@ -20,6 +22,12 @@ html, body {
     aspect-ratio: 1/1;
 }
 
-/* .container > div:hover {
-  background-color: yellow;
-} */
+button {
+    padding: 12 px;
+    margin: 40px auto;
+    color: rgb(14, 223, 223);
+    background-color: rgb(165, 113, 76);
+    border: 2px solid crimson;
+    border-radius: 8px;
+    font-size: 24px;
+}
