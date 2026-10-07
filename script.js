@@ -37,9 +37,14 @@ button.addEventListener("click",
         const divChildren = document.querySelectorAll(".container > div")
 
         divChildren.forEach((child) => {
-            child.addEventListener("mouseenter", (event) => {
-                event.target.style.backgroundColor = "blue";
-            });
+        child.addEventListener("mouseenter", (event) => {
+            let squareColor = `rgb(
+            ${Math.floor(Math.random() * 256)},
+            ${Math.floor(Math.random() * 256)},
+            ${Math.floor(Math.random() * 256)}
+            )`;
+            event.target.style.backgroundColor = squareColor;
+        });
         });
 
         boxWidth = 100/boxes
