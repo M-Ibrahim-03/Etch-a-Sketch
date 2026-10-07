@@ -8,7 +8,12 @@ const children = document.querySelectorAll(".container > div")
 
 children.forEach((child) => {
   child.addEventListener("mouseenter", (event) => {
-    event.target.style.backgroundColor = "yellow";
+    let squareColor = `rgb(
+    ${Math.floor(Math.random() * 256)},
+    ${Math.floor(Math.random() * 256)},
+    ${Math.floor(Math.random() * 256)}
+    )`;
+    event.target.style.backgroundColor = squareColor;
   });
 });
 
