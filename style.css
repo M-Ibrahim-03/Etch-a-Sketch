@@ -3,7 +3,9 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    background-color: rgb(96, 128, 177);
+    background-color: aliceblue;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -12,6 +14,8 @@ html, body {
     flex-wrap: wrap;
     box-sizing: border-box;
     margin: 50px 400px;
+    width: 960px;
+    height: 960px;
 }
 
 .container > div {
@@ -24,7 +28,7 @@ html, body {
 
 button {
     padding: 12 px;
-    margin: 40px auto;
+    margin: 10px auto;
     color: rgb(14, 223, 223);
     background-color: rgb(165, 113, 76);
     border: 2px solid crimson;

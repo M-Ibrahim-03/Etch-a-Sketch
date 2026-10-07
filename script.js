@@ -6,8 +6,18 @@ for (i=0; i<256; i++) {
 
 const children = document.querySelectorAll(".container > div")
 
+
+let opacity = 0;
+
+
 children.forEach((child) => {
   child.addEventListener("mouseenter", (event) => {
+    if(opacity <= 1) {
+        opacity += 0.1
+    }
+    console.log(opacity)
+    console.log(event.target.style.opacity)
+    event.target.style.opacity = opacity
     let squareColor = `rgb(
     ${Math.floor(Math.random() * 256)},
     ${Math.floor(Math.random() * 256)},
@@ -36,8 +46,15 @@ button.addEventListener("click",
         }
         const divChildren = document.querySelectorAll(".container > div")
 
+        opacity = 0;
+
         divChildren.forEach((child) => {
         child.addEventListener("mouseenter", (event) => {
+            if(opacity <= 1) {
+                opacity += 0.1
+            }
+            console.log(opacity)
+            event.target.style.opacity = opacity
             let squareColor = `rgb(
             ${Math.floor(Math.random() * 256)},
             ${Math.floor(Math.random() * 256)},
@@ -48,10 +65,36 @@ button.addEventListener("click",
         });
 
         boxWidth = 100/boxes
-        console.log(`${boxWidth}%`)
         divChildren.forEach((child) => {
-            child.style.setProperty("width", `${boxWidth}%`)
+        child.style.setProperty("width", `${boxWidth}%`)
             
         })
     }
 )
+
+const black = document.querySelector(".black");
+
+black.addEventListener("click", 
+    () => {
+        const divChildren = document.querySelectorAll(".container > div")
+
+        opacity = 0;
+
+        divChildren.forEach((child) => {
+        child.addEventListener("mouseenter", (event) => {
+            if(opacity <= 1) {
+                opacity += 0.1
+            }
+            console.log(opacity)
+            event.target.style.opacity = opacity
+            let squareColor = "black";
+            event.target.style.backgroundColor = squareColor;
+        });
+        });
+
+        boxWidth = 100/boxes
+        divChildren.forEach((child) => {
+        child.style.setProperty("width", `${boxWidth}%`)
+            
+        })
+})
